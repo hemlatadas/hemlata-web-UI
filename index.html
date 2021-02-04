@@ -329,8 +329,50 @@ function showSlides() {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 					   </center>	
 					    </section>
- <!--================END of SLIDING PHOTO=================-->										       
-									       
+ 
+<!--================END of SLIDING PHOTO=================-->										       
+
+<!--================START of SLIDING PHOTO 2=================-->
+			<section>							       
+		<center>														   
+				
+	<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Image Slideshow Animation | CodingNepal</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="content">
+      <div class="images">
+        <img src="mg/event/jaj3.jpg">
+        <img src="img/event/jaj5.jpg">
+        <img src="img/event/jaj6.jpg">
+        <img src="img/event/jaj7.jpg">
+        <img src="img/event/jaj8.jpg">
+      </div>
+</div>
+<script>
+      var indexValue = 0;
+      function slideShow(){
+        setTimeout(slideShow, 2500);
+        var x;
+        const img = document.querySelectorAll("img");
+        for(x = 0; x < img.length; x++){
+          img[x].style.display = "none";
+        }
+        indexValue++;
+        if(indexValue > img.length){indexValue = 1}
+        img[indexValue -1].style.display = "block";
+      }
+      slideShow();
+    </script>							   
+							   
+					   </center>	
+					    </section>
+ 
+<!--================END of SLIDING PHOTO 2=================-->								   
+								   
 	<!--================Welcome Area =================-->
         <section class="welcome_area p_120">
         	<div class="container">
