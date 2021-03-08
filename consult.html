@@ -442,19 +442,19 @@ var gibberish =
    dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat     non
    proident, sunt in culpa qui officia deserunt mollit anim id est     laborum.`;-->
 
-<!--function filltext(count, info=gibberish) {
+function filltext(count, info=gibberish) {
   var str = '', gibber = info.replace(/\s+/g,' ').split(' ');
   for (var i=0; i<count; i++) str +=         gibber[Math.floor(Math.random()*gibber.length)]+" ";
   return str;
-}-->
+}
 
-<!--function fillWords(count, info=gibberish) {
+function fillWords(count, info=gibberish) {
   var str = '', gibber = info.split(' ');
   for (var i=0; i<count; i++) str +=     gibber[Math.floor(Math.random()*gibber.length)]+" ";
   return str;
-}-->
+}
 
-<!--function fillLines(count, info=gibberish) {
+function fillLines(count, info=gibberish) {
   var str = '', gibber = info.split('\n');
 //  for (var i=0; i<count; i++) str +=     gibber[Math.floor(Math.random()*gibber.length)]+"\n";
   var f = Math.floor(Math.random()*gibber.length);  // form random         number
@@ -464,13 +464,13 @@ var gibberish =
   var rstr = [];
   for (var i=0; i<count; i++) { rstr.push( gibber[f] ); f++; f = (f %     gibber.length); }
   return rstr.join('\n');
-}-->
+}
 
 
 // Note: can mix & match gibberish & lorumIpsum in code below
 
 // initialize for filltext version
-<!--function initText() {  
+function initText() {  
   let count = 0;
   const sel = document.querySelectorAll('.gibber');
   for (el of sel) {
@@ -478,9 +478,9 @@ var gibberish =
                    else { el.append(fillWords(50, lorumIpsum)); }
     count++;
   }
-}-->
+}
 
-<!--// initialize for fillWords version
+// initialize for fillWords version
 function initWords() {  
   let count = 0;
   const sel = document.querySelectorAll('.gibber');
@@ -489,9 +489,9 @@ function initWords() {
                    else { el.append(fillWords(50, lorumIpsum)); }
     count++;
   }
-}-->
+}
 
-<!--// initialize for fillLines version 
+// initialize for fillLines version 
 function initLines() {
   let count = 0;
   const sel = document.querySelectorAll('.gibber');
@@ -500,7 +500,7 @@ function initLines() {
                    else { el.append(fillLines(5, gibberish)); }
     count++;
   }
-}-->
+}
 
 // initText();
 // initWords();
